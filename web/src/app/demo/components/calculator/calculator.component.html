@@ -1,0 +1,23 @@
+<h1>Calculator</h1>
+<div class="ui-g ui-fluid">
+  <div class="ui-g-12 ui-lg-6">
+    <!-- Left Side -->
+    <div class="card card-w-title">
+      <h1>Adder</h1>
+      <div class="ui-g form-group">
+        <div class="ui-g-12 ui-md-3">
+          <input name="num1" type="number" pInputText placeholder="Number 1" [(ngModel)]="num1">
+        </div>
+        <div class="ui-g-12 ui-md-3">
+          <input name="num2" type="number" pInputText placeholder="Number 2" [(ngModel)]="num2">
+        </div>
+        <div class="ui-g-12 ui-md-3">
+          <button pButton type="button" label="Calculate" (click)="calculate()"></button>
+        </div>
+        <div class="ui-g-12 ui-md-3">
+          <input name="result" type="number" pInputText placeholder="Result" disabled="disabled" [value]="result">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

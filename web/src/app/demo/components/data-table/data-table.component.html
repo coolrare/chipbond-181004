@@ -1,0 +1,80 @@
+<h1>DataTable</h1>
+<div class="ui-g">
+  <div class="ui-g-12">
+    <div class="card card-w-title">
+      <p-table [columns]="cols" [value]="cars" selectionMode="single" dataKey="vin" [(selection)]="selectedCar"
+        (selectionChange)="navigateToDetail(selectedCar.vin)" [paginator]="true" [rows]="10" [responsive]="true"
+        paginatorPosition="bottom" (onPage)="pageChange($event)" (onSort)="sortChange($event)">
+        <ng-template pTemplate="caption">
+          <div>List of Cars</div>
+          <div><input pInputText placeholder="filter..." ngModel #filter="ngModel" /></div>
+        </ng-template>
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+              {{col.header}}
+              <p-sortIcon [field]="col.field"></p-sortIcon>
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+          <tr [pSelectableRow]="rowData">
+            <td *ngFor="let col of columns">
+              {{rowData[col.field]}}
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+  <div class="ui-g-12">
+    <div class="card card-w-title">
+      <p-table [columns]="cols" [value]="blackCars" [paginator]="true" [rows]="10" [responsive]="true"
+        paginatorPosition="bottom">
+        <ng-template pTemplate="caption">
+          Black Cars
+        </ng-template>
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+              {{col.header}}
+              <p-sortIcon [field]="col.field"></p-sortIcon>
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+          <tr [pSelectableRow]="rowData">
+            <td *ngFor="let col of columns">
+              {{rowData[col.field]}}
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+  <div class="ui-g-12">
+    <div class="card card-w-title">
+      <p-table [columns]="cols" [value]="whiteCars" [paginator]="true" [rows]="10" [responsive]="true"
+        paginatorPosition="bottom">
+        <ng-template pTemplate="caption">
+          White Cars
+        </ng-template>
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+              {{col.header}}
+              <p-sortIcon [field]="col.field"></p-sortIcon>
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+          <tr [pSelectableRow]="rowData">
+            <td *ngFor="let col of columns">
+              {{rowData[col.field]}}
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,110 @@
+<h1>Chat Room</h1>
+
+<div class="ui-fluid">
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <div class="ui-g form-group">
+        <div class="ui-g-12 ui-md-2">
+          Name
+        </div>
+        <div class="ui-g-12 ui-md-6">
+          <input name="name" id="input" type="text" pInputText [(ngModel)]="name" />
+        </div>
+        <div class="ui-g-12 ui-md-2">
+          <button pButton type="button" label="Login" (click)="getToken()"></button>
+        </div>
+        <div class="ui-g-12 ui-md-2">
+          <button pButton type="button" label="Connect" (click)="connect()"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-g-12">
+      <div class="ui-g form-group">
+        <div class="ui-g-12 ui-md-2">
+          Access Token:
+        </div>
+        <div class="ui-g-12 ui-md-10">
+          {{ token }}
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-g-12">
+      <div class="ui-g form-group">
+        <div class="ui-g-12 ui-md-2">
+          Connected
+        </div>
+        <div class="ui-g-12 ui-md-10">
+          {{ connected }}
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-g-12">
+      <div class="ui-g form-group">
+        <div class="ui-g-12 ui-md-2">
+          Group
+        </div>
+        <div class="ui-g-12 ui-md-8">
+          <input name="message" id="input" type="text" pInputText [(ngModel)]="group" [disabled]="groupJoined" />
+        </div>
+        <div class="ui-g-12 ui-md-2">
+          <button pButton type="button" label="{{ groupJoined ? 'Leave Group' : 'Join Group'}}" (click)="joinGroup()"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-g-12">
+      <div class="ui-g form-group">
+        <div class="ui-g-12 ui-md-2">
+          To
+        </div>
+        <div class="ui-g-12 ui-md-8">
+          <input name="message" id="input" type="text" pInputText [(ngModel)]="toUser" />
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-g-12">
+      <div class="ui-g form-group">
+        <div class="ui-g-12 ui-md-2">
+          Message
+        </div>
+        <div class="ui-g-12 ui-md-8">
+          <input name="message" id="input" type="text" pInputText #input (keyup.enter)="chat(input)" [(ngModel)]="message" />
+        </div>
+        <div class="ui-g-12 ui-md-2">
+          <button pButton type="button" label="Send" (click)="chat(input)"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-g-12">
+        <div class="ui-g form-group">
+          <div class="ui-g-12 ui-md-2">
+            Broadcast
+          </div>
+          <div class="ui-g-12 ui-md-8">
+            <input name="message" id="input" type="text" pInputText #broadcastInput (keyup.enter)="sendBroadcast(broadcastInput)" [(ngModel)]="broadcast" />
+          </div>
+          <div class="ui-g-12 ui-md-2">
+            <button pButton type="button" label="Send" (click)="sendBroadcast(broadcastInput)"></button>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div>
+
+<div class="ui-fluid">
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <ul>
+        <li *ngFor="let message of messages">
+          <span *ngIf="message.private">[Private]</span>{{ message.name }} - {{ message.message }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
