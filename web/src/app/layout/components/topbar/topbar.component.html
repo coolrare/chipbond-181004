@@ -68,15 +68,14 @@
             <hr width="75%" />
           </li>
 
-          <!-- TODO: 檢查是否登入 -->
-          <li role="menuitem">
+          <li role="menuitem" *ngIf="!(isLoggedIn$ | async)">
             <a href="javascript:void(0)" (click)="login()">
               <i class="fa fa-fw fa-sign-in"></i>
               <span>Login</span>
             </a>
           </li>
 
-          <li role="menuitem">
+          <li role="menuitem" *ngIf="isLoggedIn$ | async">
             <a href="javascript:void(0)" (click)="logout()">
               <i class="fa fa-fw fa-sign-out"></i>
               <span>Logout</span>

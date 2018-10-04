@@ -1,10 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  User,
-  UserManager,
-  UserManagerSettings,
-  WebStorageStateStore
-} from 'oidc-client';
+import { User, UserManager, UserManagerSettings, WebStorageStateStore } from 'oidc-client';
 import { from, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -12,7 +7,6 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  // TODO: 設定 UserManagerSetting
   private _config: UserManagerSettings = {
     authority: 'http://localhost:5000',
     client_id: 'Angular',
