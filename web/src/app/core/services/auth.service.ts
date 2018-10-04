@@ -11,7 +11,7 @@ export class AuthService {
     authority: 'http://localhost:5000',
     client_id: 'Angular',
     redirect_uri: 'http://localhost:4200/assets/oidc-login.html',
-    scope: 'openid profile',
+    scope: 'openid profile api1',
     response_type: 'id_token token',
     post_logout_redirect_uri: 'http://localhost:4200/?postLogout=true',
     userStore: new WebStorageStateStore({ store: window.localStorage })

@@ -1,11 +1,12 @@
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthInterceptorService } from './auth-interceptor.service';
 import { CalculatorComponent } from './demo/components/calculator/calculator.component';
 import { ChatRoomComponent } from './demo/components/chat-room/chat-room.component';
 import { DataTableComponent } from './demo/components/data-table/data-table.component';
@@ -69,7 +70,12 @@ import { PrimengSharedModule } from './primeng-shared/primeng-shared.module';
     CarService,
     CountryService,
     EventService,
-    NodeService
+    NodeService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

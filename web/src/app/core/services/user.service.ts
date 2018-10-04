@@ -23,6 +23,6 @@ export class UserService {
 
   getIdentity() {
     // TODO: 實際上呼叫受 IdentityServer 保護的 API
-    return of(null);
+    return this.httpClient.get('http://localhost:5001/identity');
   }
 }

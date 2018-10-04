@@ -19,8 +19,11 @@ namespace Api
             services.AddAuthentication("Bearer")
                 .AddIdentityServerAuthentication(options =>
                 {
-                    // TODO: 設定 Identity Server 來源
+                    options.Authority = "http://localhost:5000";
+                    options.RequireHttpsMetadata = false;
+                    options.ApiName = "api1";
                 });
+
         }
 
         public void Configure(IApplicationBuilder app)

@@ -18,6 +18,7 @@ export class TopbarComponent implements OnInit {
   topMenuActive$ = this.layoutService.topbarMenuActive$;
 
   isLoggedIn$ = this.authService.isLoggedIn();
+  identity$ = this.userService.getIdentity();
   // TODO: 呼叫受保護的 API
 
   get activeTopbarItem() {
@@ -35,6 +36,10 @@ export class TopbarComponent implements OnInit {
   ngOnInit() {
     this.authService.getUser().subscribe(user => {
       console.log(user);
+    });
+
+    this.identity$.subscribe(data => {
+      console.log(data);
     });
   }
 
