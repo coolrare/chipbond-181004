@@ -10,7 +10,10 @@ const enum ChatRoomCommand {
   SendMessage = 'SendMessage',
   SetAge = 'SetAge',
   GetAge = 'GetAge',
-  SendPrivateMessage = 'SendPrivateMessage'
+  SendPrivateMessage = 'SendPrivateMessage',
+  JoinGroup = 'JoinGroup',
+  LeaveGroup = 'LeaveGroup',
+  SendMessageToGroup = 'SendMessageToGroup'
 }
 
 const enum ChatRoomEvent {
@@ -91,15 +94,15 @@ export class ChatRoomService {
   }
 
   joinGroup(group: string) {
-    // TODO: 加入某個群組
+    this.connection.invoke(ChatRoomCommand.JoinGroup, group).then(_ => console.log('Joined'));
   }
 
   leaveGroup(group: string) {
-    // TODO: 離開某個群組
+    this.connection.invoke(ChatRoomCommand.LeaveGroup, group).then(_ => console.log('Leave'));
   }
 
   sendMessageToGroup(group: string, message: string) {
-    // TODO: 針對群組發送訊息
+    this.connection.invoke(ChatRoomCommand.SendMessageToGroup, group, message);
   }
 
   broadcast(message: string) {

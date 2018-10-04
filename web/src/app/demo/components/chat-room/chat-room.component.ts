@@ -45,6 +45,8 @@ export class ChatRoomComponent implements OnInit {
     // TODO: 發送聊天訊息
     if (this.toUser) {
       this.chatRoomService.sendPrivateMessage(this.toUser, input.value);
+    } else if (this.groupJoined) {
+      this.chatRoomService.sendMessageToGroup(this.group, input.value);
     } else {
       this.chatRoomService.sendMessage(this.name, input.value);
     }
@@ -58,6 +60,12 @@ export class ChatRoomComponent implements OnInit {
 
   joinGroup() {
     // TODO: 加入/離開群組
+    if (this.groupJoined) {
+      this.chatRoomService.leaveGroup(this.group);
+    } else {
+      this.chatRoomService.joinGroup(this.group);
+    }
+    this.groupJoined = !this.groupJoined;
   }
 
   getToken() {

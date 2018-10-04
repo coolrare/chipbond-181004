@@ -56,10 +56,29 @@ namespace SignalRChat.Hubs
                 Context.Items.ContainsKey("age") ? Context.Items["age"] : "");
         }
 
-        public async Task SendPrivateMessage(string to, string message) {
+        public async Task SendPrivateMessage(string to, string message)
+        {
             await Clients.User(to)
                 .ReceivePrivateMessage(Context.UserIdentifier, message);
             await Clients.Caller.ReceivePrivateMessage($"To {to}", message);
         }
+
+        public async Task JoinGroup(string group)
+        {
+            await Groups.AddToGroupAsync(Context.ConnectionId, group);
+            await Clients.Group(group).ReceiveMessage(Context.UserIdentifier, $"Joined Group [{group}]");
+        }
+
+        public async Task LeaveGroup(string group)
+        {
+            await Groups.RemoveFromGroupAsync(Context.ConnectionId, group);
+        }
+        
+        public async Task SendMessageToGroup(string group, string message)
+        {
+            await Clients.Group(group)
+                .ReceiveMessage(Context.UserIdentifier, message);
+        }
+
     }
 }
