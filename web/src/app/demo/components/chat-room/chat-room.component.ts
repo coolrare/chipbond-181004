@@ -56,6 +56,7 @@ export class ChatRoomComponent implements OnInit {
 
   sendBroadcast(input: HTMLInputElement) {
     // TODO: 打 API 來發送廣播
+    this.chatRoomService.broadcast(input.value).subscribe();
   }
 
   joinGroup() {

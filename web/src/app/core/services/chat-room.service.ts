@@ -107,6 +107,7 @@ export class ChatRoomService {
 
   broadcast(message: string) {
     // TODO: 打 API 來進行廣播
+    return this.httpClient.post(`${apiUrl}/Broadcast/Send`, { Message: message });
   }
 
   getAccessToken(user) {

@@ -16,15 +16,18 @@ namespace SignalRChat.Controllers
     [ApiController]
     public class BroadcastController : ControllerBase
     {
-        public BroadcastController()
+        private readonly IHubContext<ChatHub> _hubContext;
+
+        public BroadcastController(IHubContext<ChatHub> hubContext)
         {
-            // TODO: 注入 IHubContext<T>
+            this._hubContext = hubContext;
         }
 
         [HttpPost]
         public IActionResult Send(BroadcastMessage message)
         {
             // TODO: 讓 IHubContext<T> 發送訊息給 client 端
+            this._hubContext.Clients.All.SendAsync("ReceiveMessage", "System", message.Message);
             return Ok();
         }
     }
