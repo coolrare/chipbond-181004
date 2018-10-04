@@ -76,12 +76,10 @@ export class ChatRoomService {
   }
 
   sendPrivateMessage(to: string, message: string) {
-    // TODO: 發送訊息給某個使用者，在取得 AccessToken 功能完成後實作
     this.connection.invoke(ChatRoomCommand.SendPrivateMessage, to , message);
   }
 
   privateMessage(): Observable<ChatMessage> {
-    // TODO: 建立接受 PrivateMessage 訊息的事件
     return Observable.create((observer: Observer<ChatMessage>) => {
       this.connection.on(ChatRoomEvent.ReceivePrivateMessage, (fromUser, message) => {
         observer.next({ private: true, name: fromUser, message: message });
@@ -90,7 +88,7 @@ export class ChatRoomService {
   }
 
   stopReceiveMessage() {
-    // TODO: 停止接受 ReceiveMessage
+    this.connection.off(ChatRoomEvent.ReceiveMessage);
   }
 
   joinGroup(group: string) {
@@ -106,12 +104,10 @@ export class ChatRoomService {
   }
 
   broadcast(message: string) {
-    // TODO: 打 API 來進行廣播
     return this.httpClient.post(`${apiUrl}/Broadcast/Send`, { Message: message });
   }
 
   getAccessToken(user) {
-    // TODO: 取得 Access Token
     return this.httpClient.post(`${apiUrl}/Account/Token`, {UserName: user});
   }
 }

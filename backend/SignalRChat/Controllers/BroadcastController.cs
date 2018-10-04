@@ -26,7 +26,6 @@ namespace SignalRChat.Controllers
         [HttpPost]
         public IActionResult Send(BroadcastMessage message)
         {
-            // TODO: 讓 IHubContext<T> 發送訊息給 client 端
             this._hubContext.Clients.All.SendAsync("ReceiveMessage", "System", message.Message);
             return Ok();
         }

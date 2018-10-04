@@ -22,7 +22,6 @@ export class ChatRoomComponent implements OnInit {
   ngOnInit() {}
 
   connect() {
-    // TODO: 建立 SignalR 連線後接收各種事件訊息
     this.chatRoomService.connect(this.token).subscribe(() => {
       console.log('連線成功');
       this.chatRoomService.receiveMessage().subscribe(message => {
@@ -42,7 +41,6 @@ export class ChatRoomComponent implements OnInit {
   }
 
   chat(input: HTMLInputElement) {
-    // TODO: 發送聊天訊息
     if (this.toUser) {
       this.chatRoomService.sendPrivateMessage(this.toUser, input.value);
     } else if (this.groupJoined) {
@@ -55,12 +53,10 @@ export class ChatRoomComponent implements OnInit {
   }
 
   sendBroadcast(input: HTMLInputElement) {
-    // TODO: 打 API 來發送廣播
     this.chatRoomService.broadcast(input.value).subscribe();
   }
 
   joinGroup() {
-    // TODO: 加入/離開群組
     if (this.groupJoined) {
       this.chatRoomService.leaveGroup(this.group);
     } else {
@@ -70,7 +66,6 @@ export class ChatRoomComponent implements OnInit {
   }
 
   getToken() {
-    // TODO: 取得 AccessToken
     this.chatRoomService.getAccessToken(this.name).subscribe((token: any) => {
       console.log(token);
       this.token = token.token;
