@@ -60,6 +60,7 @@ export class TopbarComponent implements OnInit {
 
   login() {
     // TODO: 執行登入行為
+    this.authService.login();
   }
 
   logout() {
