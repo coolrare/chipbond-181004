@@ -1,6 +1,12 @@
 import { Injectable } from '@angular/core';
-import { UserManager, UserManagerSettings, WebStorageStateStore } from 'oidc-client';
-import { Observable, of } from 'rxjs';
+import {
+  User,
+  UserManager,
+  UserManagerSettings,
+  WebStorageStateStore
+} from 'oidc-client';
+import { from, Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -25,16 +31,16 @@ export class AuthService {
   }
 
   logout() {
-    // TODO: 執行登出動作
+    this._userManager.signoutRedirect();
   }
 
-  getUser(): Observable<any> {
-    // TODO: 取得登入的使用者資訊
-    return of(null);
+  getUser(): Observable<User> {
+    return from(this._userManager.getUser());
   }
 
   isLoggedIn(): Observable<boolean> {
-    // TODO: 檢查使用者是否有登入
-    return of(true);
+    return this.getUser().pipe(
+      map(user => user && user.access_token && !user.expired)
+    );
   }
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 import { CalculatorComponent } from './demo/components/calculator/calculator.component';
 import { ChatRoomComponent } from './demo/components/chat-room/chat-room.component';
 import { DataTableComponent } from './demo/components/data-table/data-table.component';
@@ -21,10 +22,11 @@ import { UtilsDemoComponent } from './demo/view/utilsdemo.component';
 import { LayoutComponent } from './layout/components/layout/layout.component';
 
 export const routes: Routes = [
+  { path: 'signup', component: SignupComponent },
   {
     path: '',
     component: LayoutComponent,
-    canActivate: [],
+    canActivate: [AuthGuard],
     children: [
       { path: '', component: DashboardDemoComponent },
       { path: 'sample', component: SampleDemoComponent },
@@ -41,7 +43,6 @@ export const routes: Routes = [
       { path: 'utils', component: UtilsDemoComponent },
       { path: 'documentation', component: DocumentationComponent },
       { path: 'calculator', component: CalculatorComponent },
-      { path: 'signup', component: SignupComponent },
       { path: 'datatable', component: DataTableComponent },
       { path: 'chatroom', component: ChatRoomComponent },
       { path: 'datatable/:id', component: DataTableComponent }

@@ -32,7 +32,11 @@ export class TopbarComponent implements OnInit {
     private authService: AuthService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.authService.getUser().subscribe(user => {
+      console.log(user);
+    });
+  }
 
   isDisplayProfileItem() {
     return this.layoutService.isTopProfileMode();
@@ -65,5 +69,6 @@ export class TopbarComponent implements OnInit {
 
   logout() {
     // TODO: 執行登出動做
+    this.authService.logout();
   }
 }
