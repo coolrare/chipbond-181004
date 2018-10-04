@@ -9,14 +9,3 @@
 /Users/wellwind/Projects/CHIPBOND/architecture/backend/ImplicitFlowAuthentication/src/MvcClient/obj/Debug/netcoreapp2.0/MvcClient.AssemblyInfo.cs
 /Users/wellwind/Projects/CHIPBOND/architecture/backend/ImplicitFlowAuthentication/src/MvcClient/obj/Debug/netcoreapp2.0/MvcClient.dll
 /Users/wellwind/Projects/CHIPBOND/architecture/backend/ImplicitFlowAuthentication/src/MvcClient/obj/Debug/netcoreapp2.0/MvcClient.pdb
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/MvcClient/bin/Debug/netcoreapp2.0/MvcClient.deps.json
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/MvcClient/bin/Debug/netcoreapp2.0/MvcClient.runtimeconfig.json
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/MvcClient/bin/Debug/netcoreapp2.0/MvcClient.runtimeconfig.dev.json
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/MvcClient/bin/Debug/netcoreapp2.0/MvcClient.dll
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/MvcClient/bin/Debug/netcoreapp2.0/MvcClient.pdb
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/MvcClient/obj/Debug/netcoreapp2.0/MvcClient.csprojAssemblyReference.cache
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/MvcClient/obj/Debug/netcoreapp2.0/MvcClient.csproj.CoreCompileInputs.cache
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/MvcClient/obj/Debug/netcoreapp2.0/MvcClient.AssemblyInfoInputs.cache
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/MvcClient/obj/Debug/netcoreapp2.0/MvcClient.AssemblyInfo.cs
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/MvcClient/obj/Debug/netcoreapp2.0/MvcClient.dll
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/MvcClient/obj/Debug/netcoreapp2.0/MvcClient.pdb

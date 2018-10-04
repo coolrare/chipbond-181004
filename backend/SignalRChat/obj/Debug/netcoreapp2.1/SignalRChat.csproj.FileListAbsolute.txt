@@ -26,17 +26,3 @@ d:/DoggyProjects/CHIPBOND/architecture/backend/SignalRChat/obj/Debug/netcoreapp2
 /Users/wellwind/Projects/CHIPBOND/architecture/backend/SignalRChat/obj/Debug/netcoreapp2.1/SignalRChat.RazorTargetAssemblyInfo.cache
 /Users/wellwind/Projects/CHIPBOND/architecture/backend/SignalRChat/obj/Debug/netcoreapp2.1/SignalRChat.dll
 /Users/wellwind/Projects/CHIPBOND/architecture/backend/SignalRChat/obj/Debug/netcoreapp2.1/SignalRChat.pdb
-/Users/wellwind/CHIPBOND/training/backend/SignalRChat/obj/Debug/netcoreapp2.1/SignalRChat.csprojAssemblyReference.cache
-/Users/wellwind/CHIPBOND/training/backend/SignalRChat/obj/Debug/netcoreapp2.1/SignalRChat.csproj.CoreCompileInputs.cache
-/Users/wellwind/CHIPBOND/training/backend/SignalRChat/obj/Debug/netcoreapp2.1/SignalRChat.RazorAssemblyInfo.cache
-/Users/wellwind/CHIPBOND/training/backend/SignalRChat/obj/Debug/netcoreapp2.1/SignalRChat.RazorAssemblyInfo.cs
-/Users/wellwind/CHIPBOND/training/backend/SignalRChat/obj/Debug/netcoreapp2.1/SignalRChat.AssemblyInfoInputs.cache
-/Users/wellwind/CHIPBOND/training/backend/SignalRChat/obj/Debug/netcoreapp2.1/SignalRChat.AssemblyInfo.cs
-/Users/wellwind/CHIPBOND/training/backend/SignalRChat/obj/Debug/netcoreapp2.1/SignalRChat.RazorTargetAssemblyInfo.cache
-/Users/wellwind/CHIPBOND/training/backend/SignalRChat/obj/Debug/netcoreapp2.1/SignalRChat.dll
-/Users/wellwind/CHIPBOND/training/backend/SignalRChat/obj/Debug/netcoreapp2.1/SignalRChat.pdb
-/Users/wellwind/CHIPBOND/training/backend/SignalRChat/bin/Debug/netcoreapp2.1/SignalRChat.deps.json
-/Users/wellwind/CHIPBOND/training/backend/SignalRChat/bin/Debug/netcoreapp2.1/SignalRChat.runtimeconfig.json
-/Users/wellwind/CHIPBOND/training/backend/SignalRChat/bin/Debug/netcoreapp2.1/SignalRChat.runtimeconfig.dev.json
-/Users/wellwind/CHIPBOND/training/backend/SignalRChat/bin/Debug/netcoreapp2.1/SignalRChat.dll
-/Users/wellwind/CHIPBOND/training/backend/SignalRChat/bin/Debug/netcoreapp2.1/SignalRChat.pdb

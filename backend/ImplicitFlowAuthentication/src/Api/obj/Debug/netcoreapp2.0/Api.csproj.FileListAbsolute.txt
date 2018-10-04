@@ -9,14 +9,3 @@
 /Users/wellwind/Projects/CHIPBOND/architecture/backend/ImplicitFlowAuthentication/src/Api/obj/Debug/netcoreapp2.0/Api.AssemblyInfo.cs
 /Users/wellwind/Projects/CHIPBOND/architecture/backend/ImplicitFlowAuthentication/src/Api/obj/Debug/netcoreapp2.0/Api.dll
 /Users/wellwind/Projects/CHIPBOND/architecture/backend/ImplicitFlowAuthentication/src/Api/obj/Debug/netcoreapp2.0/Api.pdb
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/Api/bin/Debug/netcoreapp2.0/Api.deps.json
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/Api/bin/Debug/netcoreapp2.0/Api.runtimeconfig.json
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/Api/bin/Debug/netcoreapp2.0/Api.runtimeconfig.dev.json
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/Api/bin/Debug/netcoreapp2.0/Api.dll
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/Api/bin/Debug/netcoreapp2.0/Api.pdb
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/Api/obj/Debug/netcoreapp2.0/Api.csprojAssemblyReference.cache
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/Api/obj/Debug/netcoreapp2.0/Api.csproj.CoreCompileInputs.cache
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/Api/obj/Debug/netcoreapp2.0/Api.AssemblyInfoInputs.cache
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/Api/obj/Debug/netcoreapp2.0/Api.AssemblyInfo.cs
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/Api/obj/Debug/netcoreapp2.0/Api.dll
-/Users/wellwind/CHIPBOND/training/backend/ImplicitFlowAuthentication/src/Api/obj/Debug/netcoreapp2.0/Api.pdb
